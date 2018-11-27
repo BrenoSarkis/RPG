@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 
     public Animator animator;
     public static PlayerController instance;
+    public string areaTransitionName;
 
     // Use this for initialization
     void Start()

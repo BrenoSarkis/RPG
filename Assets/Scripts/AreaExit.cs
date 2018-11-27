@@ -3,7 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class AreaExit : MonoBehaviour
 {
-    public string areaToLoad = "";
+    public string areaToLoad;
+    public string areaTransitionName;
+
 
     void Start()
     {
@@ -20,6 +22,7 @@ public class AreaExit : MonoBehaviour
         if (other.tag == "Player")
         {
             SceneManager.LoadScene(areaToLoad);
+            PlayerController.instance.areaTransitionName = areaTransitionName;
         }
     }
 }
