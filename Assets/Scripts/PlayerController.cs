@@ -5,11 +5,21 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D theRB;
     public float moveSpeed;
 
-    public Animator animator; 
+    public Animator animator;
+    public static PlayerController instance;
 
     // Use this for initialization
     void Start()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         DontDestroyOnLoad(gameObject);
     }
 
@@ -18,7 +28,6 @@ public class PlayerController : MonoBehaviour
     {
         var x = Input.GetAxisRaw("Horizontal");
         var y = Input.GetAxisRaw("Vertical");
-
 
         theRB.velocity = new Vector2(x, y) * moveSpeed;
 
