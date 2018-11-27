@@ -18,8 +18,22 @@ public class PlayerController : MonoBehaviour
     {
         var x = Input.GetAxisRaw("Horizontal");
         var y = Input.GetAxisRaw("Vertical");
+
+
         theRB.velocity = new Vector2(x, y) * moveSpeed;
-        animator.SetFloat("moveX", x);
-        animator.SetFloat("moveY", y);
+
+        animator.SetFloat("moveX", theRB.velocity.x);
+        animator.SetFloat("moveY", theRB.velocity.y);
+
+        var isMovingRight = x == 1;
+        var isMovingLeft = x == -1;
+        var isMovingDown = y == 1;
+        var isMovingUp = y == -1;
+
+        if (isMovingRight || isMovingLeft || isMovingDown  || isMovingUp)
+        {
+            animator.SetFloat("lastMoveX",  x);
+            animator.SetFloat("lastMoveY",  y);
+        }
     }
 }
