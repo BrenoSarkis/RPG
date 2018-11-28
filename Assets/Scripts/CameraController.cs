@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
         target = PlayerController.instance.transform;
     }
 
-    void Update()
+    void LateUpdate()
     {
         transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
     }
