@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Test2.unity
     guid: 69d4779d58af83944bb3567f828c6999
+  - enabled: 1
+    path: Assets/Scenes/Countryside.unity
+    guid: bfc0afbafa06ce54198aa8b75ace7fa9
+  - enabled: 1
+    path: Assets/Scenes/Town.unity
+    guid: f40b5dd7608b71f49aca8492ca77dbd0
   m_configObjects: {}

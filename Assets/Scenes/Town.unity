@@ -195,6 +195,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114793488742432398, guid: 1fd8acee502c0504880e9d42ce22ecf2,
+        type: 2}
+      propertyPath: theMap
+      value: 
+      objectReference: {fileID: 390071708}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fd8acee502c0504880e9d42ce22ecf2, type: 2}
   m_IsPrefabAsset: 0
@@ -13560,6 +13565,61 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &916753508
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4143832388459024, guid: 0f428895940d9bb4eaabc81176d2f864, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -14.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143832388459024, guid: 0f428895940d9bb4eaabc81176d2f864, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 9.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143832388459024, guid: 0f428895940d9bb4eaabc81176d2f864, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143832388459024, guid: 0f428895940d9bb4eaabc81176d2f864, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143832388459024, guid: 0f428895940d9bb4eaabc81176d2f864, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143832388459024, guid: 0f428895940d9bb4eaabc81176d2f864, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143832388459024, guid: 0f428895940d9bb4eaabc81176d2f864, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4143832388459024, guid: 0f428895940d9bb4eaabc81176d2f864, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114590086551715388, guid: 0f428895940d9bb4eaabc81176d2f864,
+        type: 2}
+      propertyPath: areaToLoad
+      value: Countryside
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667921627376634, guid: 0f428895940d9bb4eaabc81176d2f864, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667921627376634, guid: 0f428895940d9bb4eaabc81176d2f864, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.87
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0f428895940d9bb4eaabc81176d2f864, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &944733775
 GameObject:
   m_ObjectHideFlags: 0
