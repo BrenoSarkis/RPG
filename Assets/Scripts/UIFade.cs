@@ -7,8 +7,8 @@ public class UIFade : MonoBehaviour
     public Image fadeScreen;
     public float fadeSpeed;
 
-    public bool shouldFadeToBlack;
-    public bool shouldFadeFromBlack;
+    private bool shouldFadeToBlack;
+    private bool shouldFadeFromBlack;
 
     void Start()
     {
