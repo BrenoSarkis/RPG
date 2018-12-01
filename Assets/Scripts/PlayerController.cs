@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public static PlayerController instance;
     public string areaTransitionName;
+    public bool canMove = true;
 
     private Vector3 bottomLeftLimit;
     private Vector3 topRightLimit;
@@ -33,7 +34,15 @@ public class PlayerController : MonoBehaviour
         var x = Input.GetAxisRaw("Horizontal");
         var y = Input.GetAxisRaw("Vertical");
 
-        theRB.velocity = new Vector2(x, y) * moveSpeed;
+        if (canMove)
+        {
+            theRB.velocity = new Vector2(x, y) * moveSpeed; 
+
+        }
+        else
+        {
+            theRB.velocity = Vector2.zero;
+        }
 
         animator.SetFloat("moveX", theRB.velocity.x);
         animator.SetFloat("moveY", theRB.velocity.y);
@@ -45,8 +54,11 @@ public class PlayerController : MonoBehaviour
 
         if (isMovingRight || isMovingLeft || isMovingDown  || isMovingUp)
         {
-            animator.SetFloat("lastMoveX",  x);
-            animator.SetFloat("lastMoveY",  y);
+            if (canMove)
+            {
+                animator.SetFloat("lastMoveX", x);
+                animator.SetFloat("lastMoveY", y);
+            }
         }
 
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x),
