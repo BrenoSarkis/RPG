@@ -13,9 +13,11 @@ public class DialogManager : MonoBehaviour
 
     public int currentLine;
 
+    public static DialogManager instance;
+
     void Start()
     {
-        dialogText.text = dialogLines[currentLine];
+        instance = this;
     }
 
     void Update()
@@ -36,5 +38,13 @@ public class DialogManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void ShowDialog(string[] newLines)
+    {
+        dialogLines = newLines;
+        currentLine = 0;
+        dialogText.text = dialogLines[currentLine];
+        dialogBox.SetActive(true);
     }
 }
