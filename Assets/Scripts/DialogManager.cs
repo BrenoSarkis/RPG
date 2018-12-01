@@ -15,17 +15,26 @@ public class DialogManager : MonoBehaviour
 
     void Start()
     {
-        //dialogText.text = dialogLines[currentLine];
+        dialogText.text = dialogLines[currentLine];
     }
 
     void Update()
-    {
-        //if (dialogBox.activeInHierarchy)
-        //{
-        //    if (Input.GetButtonUp("Fire1"))
-        //    {
-                
-        //    }
-        //}
+    {  
+        if (dialogBox.activeInHierarchy)
+        {
+            if (Input.GetButtonUp("Fire1"))
+            {
+                currentLine++;
+
+                if (currentLine >= dialogLines.Length)
+                {
+                    dialogBox.SetActive(false);
+                }
+                else
+                {
+                    dialogText.text = dialogLines[currentLine];
+                }
+            }
+        }
     }
 }
