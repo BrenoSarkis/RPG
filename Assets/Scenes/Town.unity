@@ -21904,5 +21904,10 @@ MonoBehaviour:
   nameText: {fileID: 773187052}
   dialogBox: {fileID: 1017358514}
   nameBox: {fileID: 1447248028}
-  dialogLines: []
+  dialogLines:
+  - This
+  - is
+  - a
+  - test
+  - array
   currentLine: 0
