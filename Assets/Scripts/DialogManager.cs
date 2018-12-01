@@ -5,15 +5,13 @@ public class DialogManager : MonoBehaviour
 {
     public Text dialogText;
     public Text nameText;
-
     public GameObject dialogBox;
     public GameObject nameBox;
-
     public string[] dialogLines;
-
     public int currentLine;
-
     public static DialogManager instance;
+
+    private bool justStarted;
 
     void Start()
     {
@@ -26,15 +24,22 @@ public class DialogManager : MonoBehaviour
         {
             if (Input.GetButtonUp("Fire1"))
             {
-                currentLine++;
-
-                if (currentLine >= dialogLines.Length)
+                if (!justStarted)
                 {
-                    dialogBox.SetActive(false);
+                    currentLine++;
+
+                    if (currentLine >= dialogLines.Length)
+                    {
+                        dialogBox.SetActive(false);
+                    }
+                    else
+                    {
+                        dialogText.text = dialogLines[currentLine];
+                    }
                 }
                 else
                 {
-                    dialogText.text = dialogLines[currentLine];
+                    justStarted = false;
                 }
             }
         }
@@ -46,5 +51,6 @@ public class DialogManager : MonoBehaviour
         currentLine = 0;
         dialogText.text = dialogLines[currentLine];
         dialogBox.SetActive(true);
+        justStarted = true;
     }
 }
