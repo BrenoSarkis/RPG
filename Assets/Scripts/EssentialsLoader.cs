@@ -5,6 +5,7 @@ public class EssentialsLoader : MonoBehaviour
 {
     public GameObject UIScreen;
     public GameObject player;
+    public GameObject gameManager;
 
     void Start()
     {
@@ -16,6 +17,11 @@ public class EssentialsLoader : MonoBehaviour
         if (PlayerController.instance == null)
         {
             PlayerController.instance = Instantiate(player).GetComponent<PlayerController>();
+        }
+
+        if (GameManager.instance == null)
+        {
+            Instantiate(gameManager);
         }
     }
 
