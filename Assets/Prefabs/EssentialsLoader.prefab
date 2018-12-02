@@ -53,3 +53,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIScreen: {fileID: 1407537442995824, guid: 55b4d36d2d9dcaf4b948bff2fa69770a, type: 2}
   player: {fileID: 1709087056617478, guid: 3d0dba719a86b8042ae63207f2da11ee, type: 2}
+  gameManager: {fileID: 1113140953107130, guid: 73b1474011ef1c544b920ffd4f606438,
+    type: 2}
