@@ -41,5 +41,20 @@ public class CharStats : MonoBehaviour
     public void AddExp(int expToAdd)
     {
         currentEXP += expToAdd;
+
+        if (currentEXP > expToNextLevel[playerLevel])
+        {
+            currentEXP -= expToNextLevel[playerLevel];
+            playerLevel++;
+
+            if (playerLevel % 2 == 0)
+            {
+                strength++;
+            }
+            else
+            {
+                defense++;
+            }
+        }
     }
 }

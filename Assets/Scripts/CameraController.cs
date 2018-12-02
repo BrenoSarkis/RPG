@@ -34,7 +34,7 @@ public class CameraController : MonoBehaviour
     private void KeepCameraInsideBounds()
     {
         transform.position = new Vector3(Mathf.Clamp(transform.position.x, bottomLeftLimit.x, topRightLimit.x),
-            Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y),
-            transform.position.z);
+                                         Mathf.Clamp(transform.position.y, bottomLeftLimit.y, topRightLimit.y),
+                                         transform.position.z);
     }
 }
