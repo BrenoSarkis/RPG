@@ -41,5 +41,25 @@ public class GameMenu : MonoBehaviour
     public void UpdateMainStats()
     {
         playerStats = GameManager.instance.playerStats;
+
+        for (int i = 0; i < playerStats.Length; i++)
+        {
+            if (playerStats[i].gameObject.activeInHierarchy)
+            {
+                charStatHolder[i].SetActive(true);
+                namesText[i].text = playerStats[i].charName;
+                hpsText[i].text = $"HP: {playerStats[i].currentHP}/{playerStats[i].maxHP}";
+                mpsText[i].text = $"MP: {playerStats[i].currentMP}/{playerStats[i].maxMP}";
+                lvlsText[i].text = $"Lvl: {playerStats[i].playerLevel}";
+                expsText[i].text = playerStats[i].currentEXP + "/" + playerStats[i].expToNextLevel[playerStats[i].playerLevel]; //$"{playerStats[i].currentEXP} / {playerStats[i].expToNextLevel[playerStats[i].playerLevel]}";
+                expsSliders[i].maxValue = playerStats[i].expToNextLevel[playerStats[i].playerLevel];
+                expsSliders[i].value = playerStats[i].currentEXP;
+                charactersImages[i].sprite = playerStats[i].charImage;
+            }
+            else
+            {
+                charStatHolder[i].SetActive(false);
+            }
+        }
     }
 }
