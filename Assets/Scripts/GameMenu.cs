@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class GameMenu : MonoBehaviour
 {
     public GameObject menu;
+    public GameObject[] windows;
+
     public Text[] namesText;
     public Text[] hpsText;
     public Text[] mpsText;
@@ -26,8 +29,7 @@ public class GameMenu : MonoBehaviour
         {
             if (menu.activeInHierarchy)
             {
-                menu.SetActive(false);
-                GameManager.instance.gameMenuOpen = false;
+                CloseMenu();
             }
             else
             {
@@ -51,7 +53,7 @@ public class GameMenu : MonoBehaviour
                 hpsText[i].text = $"HP: {playerStats[i].currentHP}/{playerStats[i].maxHP}";
                 mpsText[i].text = $"MP: {playerStats[i].currentMP}/{playerStats[i].maxMP}";
                 lvlsText[i].text = $"Lvl: {playerStats[i].playerLevel}";
-                expsText[i].text = $"{playerStats[i].currentEXP} / {playerStats[i].expToNextLevel[playerStats[i].playerLevel]}";
+                expsText[i].text = $"{playerStats[i].currentEXP}/{playerStats[i].expToNextLevel[playerStats[i].playerLevel]}";
                 expsSliders[i].maxValue = playerStats[i].expToNextLevel[playerStats[i].playerLevel];
                 expsSliders[i].value = playerStats[i].currentEXP;
                 charactersImages[i].sprite = playerStats[i].charImage;
@@ -61,5 +63,31 @@ public class GameMenu : MonoBehaviour
                 charStatHolder[i].SetActive(false);
             }
         }
+    }
+
+    public void ToggleWindow(int windowIndex)
+    {
+        for (int i = 0; i < windows.Length; i++)
+        {
+            if (i == windowIndex)
+            {
+                windows[i].SetActive(!windows[i].activeInHierarchy);
+            }
+            else
+            {
+                windows[i].SetActive(false);
+            }
+        }
+    }
+
+    public void CloseMenu()
+    {
+        foreach (var window in windows)
+        {
+            window.SetActive(false);
+        }
+
+        menu.SetActive(false);
+        GameManager.instance.gameMenuOpen = false;
     }
 }
