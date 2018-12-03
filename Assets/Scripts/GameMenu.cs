@@ -51,7 +51,7 @@ public class GameMenu : MonoBehaviour
                 hpsText[i].text = $"HP: {playerStats[i].currentHP}/{playerStats[i].maxHP}";
                 mpsText[i].text = $"MP: {playerStats[i].currentMP}/{playerStats[i].maxMP}";
                 lvlsText[i].text = $"Lvl: {playerStats[i].playerLevel}";
-                expsText[i].text = playerStats[i].currentEXP + "/" + playerStats[i].expToNextLevel[playerStats[i].playerLevel]; //$"{playerStats[i].currentEXP} / {playerStats[i].expToNextLevel[playerStats[i].playerLevel]}";
+                expsText[i].text = $"{playerStats[i].currentEXP} / {playerStats[i].expToNextLevel[playerStats[i].playerLevel]}";
                 expsSliders[i].maxValue = playerStats[i].expToNextLevel[playerStats[i].playerLevel];
                 expsSliders[i].value = playerStats[i].currentEXP;
                 charactersImages[i].sprite = playerStats[i].charImage;
