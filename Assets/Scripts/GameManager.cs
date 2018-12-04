@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class GameManager : MonoBehaviour
     public bool gameMenuOpen;
     public bool dialogActive;
     public bool fadingBetweenAreas;
+
+    public string[] itensHeld;
+    public int[] numberOfItens;
+    public Item[] referenceItens;
+
     void Start()
     {
         instance = this;
@@ -25,5 +31,10 @@ public class GameManager : MonoBehaviour
         {
             PlayerController.instance.canMove = true;
         }
+    }
+
+    public Item GetItemDetails(string itemToGrab)
+    {
+        return referenceItens.First(ri => ri.itemName == itemToGrab);
     }
 }

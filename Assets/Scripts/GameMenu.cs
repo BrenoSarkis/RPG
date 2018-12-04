@@ -29,6 +29,8 @@ public class GameMenu : MonoBehaviour
     public Text statusExp;
     public Image statusCharImage;
 
+    public ItemButton[] itemButtons;
+
     private CharStats[] playerStats;
 
     void Start()
@@ -132,5 +134,24 @@ public class GameMenu : MonoBehaviour
         statusExp.text = (playerStats[selectedIndex].expToNextLevel[playerStats[selectedIndex].playerLevel] - playerStats[selectedIndex].currentEXP).ToString();
         statusCharImage.sprite = playerStats[selectedIndex].charImage;
     }
-}
 
+    public void ShowItens()
+    {
+        for (int i = 0; i < itemButtons.Length; i++)
+        {
+            itemButtons[i].buttonValue = i;
+
+            if (!String.IsNullOrWhiteSpace(GameManager.instance.itensHeld[i]))
+            {
+                itemButtons[i].buttonImage.gameObject.SetActive(true); 
+                itemButtons[i].buttonImage.sprite = GameManager.instance.GetItemDetails(GameManager.instance.itensHeld[i]).itemSprite;
+                itemButtons[i].amountText.text = GameManager.instance.numberOfItens[i].ToString();
+            }
+            else
+            {
+                itemButtons[i].buttonImage.gameObject.SetActive(false);
+                itemButtons[i].amountText.text = "";
+            }
+        }
+    }
+}

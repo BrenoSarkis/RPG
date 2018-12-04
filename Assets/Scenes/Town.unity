@@ -33332,6 +33332,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: itensHeld.Array.size
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: numberOfItens.Array.size
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: referenceItens.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4258646146508578, guid: 73b1474011ef1c544b920ffd4f606438, type: 2}
       propertyPath: m_LocalPosition.x
       value: 12.872289
@@ -33409,6 +33424,82 @@ Prefab:
         type: 2}
       propertyPath: armorPower
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: referenceItens.Array.data[0]
+      value: 
+      objectReference: {fileID: 114406045301749254, guid: c9418bd4b2623ba4cb6141776f2d4c4a,
+        type: 2}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: referenceItens.Array.data[1]
+      value: 
+      objectReference: {fileID: 114792263047666518, guid: 513dff834819df54aa704880e6d90d0e,
+        type: 2}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: referenceItens.Array.data[2]
+      value: 
+      objectReference: {fileID: 114458233594145406, guid: f81a8245d147287479af26d6fd0a8898,
+        type: 2}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: referenceItens.Array.data[3]
+      value: 
+      objectReference: {fileID: 114617140776288286, guid: ce939857d88e2894a94babb65e63a8b4,
+        type: 2}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: referenceItens.Array.data[4]
+      value: 
+      objectReference: {fileID: 114376633018173962, guid: c75a64690ad835e49b82b27c27077cd7,
+        type: 2}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: referenceItens.Array.data[5]
+      value: 
+      objectReference: {fileID: 114650021747435068, guid: 707b8fa22dd910244a55d111640a8977,
+        type: 2}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: itensHeld.Array.data[4]
+      value: Health Potion
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: itensHeld.Array.data[10]
+      value: Iron Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: numberOfItens.Array.data[4]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: numberOfItens.Array.data[10]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: numberOfItens.Array.data[28]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: itensHeld.Array.data[28]
+      value: Mana Potion
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: itensHeld.Array.data[22]
+      value: Leather Armor
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: numberOfItens.Array.data[22]
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73b1474011ef1c544b920ffd4f606438, type: 2}
