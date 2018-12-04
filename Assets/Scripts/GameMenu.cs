@@ -15,6 +15,7 @@ public class GameMenu : MonoBehaviour
     public Slider[] expsSliders;
     public Image[] charactersImages;
     public GameObject[] charStatHolder;
+    public GameObject[] statusButtons;
 
     private CharStats[] playerStats;
 
@@ -89,5 +90,13 @@ public class GameMenu : MonoBehaviour
 
         menu.SetActive(false);
         GameManager.instance.gameMenuOpen = false;
+    }
+
+    public void OpenStatus()
+    {
+        for (int i = 0; i < statusButtons.Length; i++)
+        {
+            statusButtons[i].SetActive(playerStats[i].gameObject.activeInHierarchy);
+        }
     }
 }
