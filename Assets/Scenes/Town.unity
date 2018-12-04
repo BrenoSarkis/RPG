@@ -26013,12 +26013,27 @@ Prefab:
     - target: {fileID: 114728128155145974, guid: 73b1474011ef1c544b920ffd4f606438,
         type: 2}
       propertyPath: weaponPower
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114728128155145974, guid: 73b1474011ef1c544b920ffd4f606438,
         type: 2}
       propertyPath: currentMP
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114728128155145974, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: charName
+      value: Tim
+      objectReference: {fileID: 0}
+    - target: {fileID: 114728128155145974, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: currentHP
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 114728128155145974, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: armorPower
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73b1474011ef1c544b920ffd4f606438, type: 2}
@@ -26173,18 +26188,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1391741186}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1922037492}
-        m_MethodName: ToggleWindow
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1391741186
@@ -27452,18 +27456,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1808683895}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1922037492}
-        m_MethodName: ToggleWindow
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1808683895
@@ -28054,7 +28047,21 @@ MonoBehaviour:
   - {fileID: 943000452}
   - {fileID: 1104331169}
   - {fileID: 1563645198}
-  statusButtons: []
+  statusButtons:
+  - {fileID: 2019523655}
+  - {fileID: 1808683892}
+  - {fileID: 1391741183}
+  statusName: {fileID: 683422037}
+  statusHp: {fileID: 979629040}
+  statusMP: {fileID: 1101156548}
+  statusStrength: {fileID: 1864734230}
+  statusDefense: {fileID: 1691275371}
+  statusWeaponEquipped: {fileID: 1308023179}
+  statusWeaponPower: {fileID: 1908138578}
+  statusArmorEquipped: {fileID: 1027001056}
+  statusArmorPower: {fileID: 1457514961}
+  statusExp: {fileID: 1020265532}
+  statusCharImage: {fileID: 1498383659}
 --- !u!1 &1960490700
 GameObject:
   m_ObjectHideFlags: 0
@@ -28164,18 +28171,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2019523658}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1922037492}
-        m_MethodName: ToggleWindow
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2019523658

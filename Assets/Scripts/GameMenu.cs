@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,6 +17,17 @@ public class GameMenu : MonoBehaviour
     public Image[] charactersImages;
     public GameObject[] charStatHolder;
     public GameObject[] statusButtons;
+    public Text statusName;
+    public Text statusHp;
+    public Text statusMP;
+    public Text statusStrength;
+    public Text statusDefense;
+    public Text statusWeaponEquipped;
+    public Text statusWeaponPower;
+    public Text statusArmorEquipped;
+    public Text statusArmorPower;
+    public Text statusExp;
+    public Image statusCharImage;
 
     private CharStats[] playerStats;
 
@@ -68,6 +80,8 @@ public class GameMenu : MonoBehaviour
 
     public void ToggleWindow(int windowIndex)
     {
+        UpdateMainStats();
+
         for (int i = 0; i < windows.Length; i++)
         {
             if (i == windowIndex)
@@ -94,9 +108,29 @@ public class GameMenu : MonoBehaviour
 
     public void OpenStatus()
     {
+        UpdateMainStats();
+        StatusChar(0);
+
         for (int i = 0; i < statusButtons.Length; i++)
         {
             statusButtons[i].SetActive(playerStats[i].gameObject.activeInHierarchy);
+            statusButtons[i].GetComponentInChildren<Text>().text = playerStats[i].charName;
         }
     }
+
+    public void StatusChar(int selectedIndex)
+    {
+        statusName.text = playerStats[selectedIndex].charName;
+        statusHp.text = $"HP: {playerStats[selectedIndex].currentHP}/{playerStats[selectedIndex].maxHP}";
+        statusMP.text = $"MP: {playerStats[selectedIndex].currentMP}/{playerStats[selectedIndex].maxMP}";
+        statusStrength.text = playerStats[selectedIndex].strength.ToString();
+        statusDefense.text = playerStats[selectedIndex].defense.ToString();
+        statusWeaponEquipped.text = String.IsNullOrWhiteSpace(playerStats[selectedIndex].equippedWeapon) ? "None" : playerStats[selectedIndex].equippedWeapon;
+        statusWeaponPower.text = playerStats[selectedIndex].weaponPower.ToString();
+        statusArmorEquipped.text = String.IsNullOrWhiteSpace(playerStats[selectedIndex].equippedArmor) ? "None" : playerStats[selectedIndex].equippedArmor;
+        statusArmorPower.text = playerStats[selectedIndex].armorPower.ToString();
+        statusExp.text = (playerStats[selectedIndex].expToNextLevel[playerStats[selectedIndex].playerLevel] - playerStats[selectedIndex].currentEXP).ToString();
+        statusCharImage.sprite = playerStats[selectedIndex].charImage;
+    }
 }
+
