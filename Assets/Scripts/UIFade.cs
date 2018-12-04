@@ -14,8 +14,7 @@ public class UIFade : MonoBehaviour
     {
         instance = this;
 
-        DontDestroyOnLoad(gameObject
-            );
+        DontDestroyOnLoad(gameObject);
     }
 
     void Update()
