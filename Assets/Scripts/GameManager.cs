@@ -37,4 +37,10 @@ public class GameManager : MonoBehaviour
     {
         return referenceItens.First(ri => ri.itemName == itemToGrab);
     }
+
+    public void SortItens()
+    {
+        itensHeld = itensHeld.OrderByDescending(i => i != "").ToArray();
+        numberOfItens = numberOfItens.OrderByDescending(i => i != 0).ToArray();
+    }
 }
