@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GameMenu : MonoBehaviour
 {
+    public static GameMenu instance;
+
     public GameObject menu;
     public GameObject[] windows;
 
@@ -30,12 +32,19 @@ public class GameMenu : MonoBehaviour
     public Image statusCharImage;
 
     public ItemButton[] itemButtons;
+    public string selectedItem;
+    public Item activeItem;
+    public Text itemName;
+    public Text itemDescription;
 
     private CharStats[] playerStats;
 
     void Start()
     {
-
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
 
     void Update()

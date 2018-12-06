@@ -33696,7 +33696,7 @@ Prefab:
     - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
         type: 2}
       propertyPath: referenceItens.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4258646146508578, guid: 73b1474011ef1c544b920ffd4f606438, type: 2}
       propertyPath: m_LocalPosition.x
@@ -33852,6 +33852,22 @@ Prefab:
       propertyPath: numberOfItens.Array.data[22]
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: itensHeld.Array.data[0]
+      value: Fire Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: numberOfItens.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357569501728252, guid: 73b1474011ef1c544b920ffd4f606438,
+        type: 2}
+      propertyPath: referenceItens.Array.data[6]
+      value: 
+      objectReference: {fileID: 114406045301749254, guid: ef38d3b92ddf3624f9e3ec3d2c197c05,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73b1474011ef1c544b920ffd4f606438, type: 2}
   m_IsPrefabAsset: 0
@@ -39385,6 +39401,10 @@ MonoBehaviour:
   - {fileID: 1594515129}
   - {fileID: 191022190}
   - {fileID: 1127301415}
+  selectedItem: 
+  activeItem: {fileID: 0}
+  itemName: {fileID: 0}
+  itemDescription: {fileID: 0}
 --- !u!1 &1922755573
 GameObject:
   m_ObjectHideFlags: 0
