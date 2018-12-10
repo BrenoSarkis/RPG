@@ -36,6 +36,7 @@ public class GameMenu : MonoBehaviour
     public Item activeItem;
     public Text itemName;
     public Text itemDescription;
+    public Text useButtonText;
 
     private CharStats[] playerStats;
 
