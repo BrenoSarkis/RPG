@@ -43,4 +43,14 @@ public class GameManager : MonoBehaviour
         itensHeld = itensHeld.OrderByDescending(i => i != "").ToArray();
         numberOfItens = numberOfItens.OrderByDescending(i => i != 0).ToArray();
     }
+
+    public void AddItem(string itemToAdd)
+    {
+
+    }
+
+    public void RemoveItem(string itemToRemove)
+    {
+
+    }
 }
