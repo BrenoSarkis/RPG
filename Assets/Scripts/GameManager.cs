@@ -46,7 +46,28 @@ public class GameManager : MonoBehaviour
 
     public void AddItem(string itemToAdd)
     {
+        bool foundSpaceForItem = false;
 
+        var newItemSlot = itensHeld.Where((item, index) => itensHeld[index] == "" || itensHeld[index] == itemToAdd)
+                                   .Select((item, index) => new { index })
+                                   .FirstOrDefault();
+
+        foundSpaceForItem = newItemSlot != null;
+
+        if (foundSpaceForItem)
+        {
+            var itemExists = referenceItens.Any(i => i.itemName == itemToAdd);
+
+            if (itemExists)
+            {
+                itensHeld[newItemSlot.index] = itemToAdd;
+                numberOfItens[newItemSlot.index]++;
+            }
+            else
+            {
+                Debug.LogError($"{itemToAdd} does not exist.");
+            }
+        }
     }
 
     public void RemoveItem(string itemToRemove)
