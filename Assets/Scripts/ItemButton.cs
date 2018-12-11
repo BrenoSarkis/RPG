@@ -16,4 +16,12 @@ public class ItemButton : MonoBehaviour
     {
 
     }
+
+    public void Press()
+    {
+        if (GameManager.instance.itensHeld[buttonValue] != "")
+        {
+          
+        }
+    }
 }
