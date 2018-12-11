@@ -165,4 +165,22 @@ public class GameMenu : MonoBehaviour
             }
         }
     }
+
+    public void SelectItem(Item newItem)
+    {
+        activeItem = newItem;
+
+        if (activeItem.isItem)
+        {
+            useButtonText.text = "Use";
+        }
+
+        if (activeItem.isArmor || activeItem.isWeapon)
+        {
+            useButtonText.text = "Equip";
+        }
+
+        itemName.text = newItem.itemName;
+        itemDescription.text = newItem.description;
+    }
 }

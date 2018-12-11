@@ -21,7 +21,7 @@ public class ItemButton : MonoBehaviour
     {
         if (GameManager.instance.itensHeld[buttonValue] != "")
         {
-          
+          GameMenu.instance.SelectItem(GameManager.instance.GetItemDetails(GameManager.instance.itensHeld[buttonValue]));
         }
     }
 }
