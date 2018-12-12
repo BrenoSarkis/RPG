@@ -86,6 +86,8 @@ public class GameManager : MonoBehaviour
             {
                 itensHeld[itemSlot.index] = "";
             }
+
+            GameMenu.instance.ShowItens();
         }
         else
         {
