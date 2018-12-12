@@ -40,6 +40,9 @@ public class GameMenu : MonoBehaviour
 
     private CharStats[] playerStats;
 
+    public GameObject itemCharacterChoiceMenu;
+    public Text[] itemCharacterChoiceNames;
+
     void Start()
     {
         if (instance == null)
@@ -105,6 +108,8 @@ public class GameMenu : MonoBehaviour
                 windows[i].SetActive(false);
             }
         }
+
+        CloseItemCharacterChoice();
     }
 
     public void CloseMenu()
@@ -116,6 +121,8 @@ public class GameMenu : MonoBehaviour
 
         menu.SetActive(false);
         GameManager.instance.gameMenuOpen = false;
+
+        CloseItemCharacterChoice();
     }
 
     public void OpenStatus()
@@ -190,5 +197,21 @@ public class GameMenu : MonoBehaviour
         {
             GameManager.instance.RemoveItem(activeItem.itemName);
         }
+    }
+
+    public void OpenItemCharacterChoice()
+    {
+        itemCharacterChoiceMenu.SetActive(true);
+
+        for (int i = 0; i < itemCharacterChoiceNames.Length; i++)
+        {
+            itemCharacterChoiceNames[i].text = GameManager.instance.playerStats[i].charName;
+            itemCharacterChoiceNames[i].transform.parent.gameObject.SetActive(GameManager.instance.playerStats[i].gameObject.activeInHierarchy);
+        }
+    }
+
+    public void CloseItemCharacterChoice()
+    {
+        itemCharacterChoiceMenu.SetActive(false);
     }
 }
