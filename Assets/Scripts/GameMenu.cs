@@ -183,4 +183,12 @@ public class GameMenu : MonoBehaviour
         itemName.text = newItem.itemName;
         itemDescription.text = newItem.description;
     }
+
+    public void DiscardItem()
+    {
+        if (useGUILayout)
+        {
+            
+        }
+    }
 }

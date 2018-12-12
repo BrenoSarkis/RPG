@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     public Item GetItemDetails(string itemToGrab)
     {
         return referenceItens.First(ri => ri.itemName == itemToGrab);
@@ -46,13 +47,11 @@ public class GameManager : MonoBehaviour
 
     public void AddItem(string itemToAdd)
     {
-        bool foundSpaceForItem = false;
-
         var newItemSlot = itensHeld.Where((item, index) => itensHeld[index] == "" || itensHeld[index] == itemToAdd)
                                    .Select((item, index) => new { index })
                                    .FirstOrDefault();
 
-        foundSpaceForItem = newItemSlot != null;
+        var foundSpaceForItem = newItemSlot != null;
 
         if (foundSpaceForItem)
         {
@@ -68,10 +67,29 @@ public class GameManager : MonoBehaviour
                 Debug.LogError($"{itemToAdd} does not exist.");
             }
         }
+
+        GameMenu.instance.ShowItens();
     }
 
     public void RemoveItem(string itemToRemove)
     {
+        var itemSlot = itensHeld.Where((item, index) =>  itensHeld[index] == itemToRemove)
+                       .Select((item, index) => new { index })
+                       .FirstOrDefault();
 
+        var foundItem = itemSlot != null;
+
+        if (foundItem)
+        {
+            numberOfItens[itemSlot.index]--;
+            if (numberOfItens[itemSlot.index] <= 0)
+            {
+                itensHeld[itemSlot.index] = "";
+            }
+        }
+        else
+        {
+            Debug.LogError($"Couldn't find {itemToRemove}");
+        }
     }
 }
